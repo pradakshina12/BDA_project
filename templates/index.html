@@ -64,6 +64,9 @@
             font-weight: bold;
             margin-top: 20px;
         }
+        .result.rejected {
+            color: #E74C3C;
+        }
     </style>
 </head>
 <body>
@@ -96,8 +99,12 @@
 
             <button type="submit">Predict Loan Eligibility</button>
         </form>
-    
         
+        {% if prediction_text %}
+        <div class="result {{ 'rejected' if prediction_text == 'Rejected' else '' }}">
+            Loan Prediction: {{ prediction_text }}
+        </div>
+        {% endif %}
     </div>
 </body>
 </html>

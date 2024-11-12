@@ -36,6 +36,7 @@ def predict():
     # Convert input data to DataFrame with only the selected features
     input_df = pd.DataFrame([input_data])
 
+
     # Predict Loan Status
     prediction = model.predict(input_df)
     prediction_text = "Approved" if prediction[0] == 1 else "Rejected"
