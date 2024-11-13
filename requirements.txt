@@ -1,3 +1,3 @@
-Flask
-pandas
-pickle
+Flask==2.3.3
+pandas==2.1.1
+pickle-mixin==1.0.2
